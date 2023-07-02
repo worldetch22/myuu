@@ -61,7 +61,7 @@
     .header{
         display: flex;
         background-color: #ffcd00;
-        height: 200px;
+        height: 150px;
         flex-direction: row;
         align-items: center
     }
@@ -75,11 +75,12 @@
 
     .colcard-wrap > p {
         padding: 0;
+        font-size: 22px;
         margin: 0;
     }
 
     .colcard-wrap > img {
-        width: 30px;
+        width: 21px;
         align-items: center;
     }
 
@@ -109,9 +110,9 @@
         text-decoration: none;
 
         background-color: rgba(255, 255, 255, 0.8);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        backdrop-filter: saturate(180%) blur(20px);
-        padding-top: 16px;
+        -webkit-backdrop-filter: saturate(180%) blur(10px);
+        backdrop-filter: saturate(180%) blur(10px);
+        padding-top: 12px;
 
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
 
@@ -123,7 +124,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: 10px;
+        row-gap: 5px;
     }
 
     .footer-item > p {
@@ -159,12 +160,13 @@
         /* border: 1px solid #00000010; */
         border-radius: 25px;
         background-color: white;
-        padding: 25px;
+        padding: 10px;
         display: flex;
         column-gap: 20px;
         margin-left: 20px;
         margin-right: 20px;
-        margin-top: -38px;
+        margin-top: -27px;
+        flex-direction: column;
 
         box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.10);
     }
@@ -192,7 +194,6 @@
     .ckv-content > img {
         width: 100%;
         max-width: 130px;
-        padding-top: 10px;
     }
 
     .ckv-name{
@@ -209,6 +210,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        padding: 20px;
+        row-gap: 10px;
     }
 
     .ckd-item{
@@ -242,6 +245,94 @@
         flex-direction: column;
         row-gap: 3px;
     }
+
+
+
+    .ios-segmented-control {
+    --background: rgba(239,239,240,1);
+    background: var(--background);
+    border-radius: 40px;
+    margin: 0;
+    padding: 2px;
+    border: none;
+    outline: none;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ios-segmented-control .selection {
+    background: rgba(255,255,255,1);
+    border: 0.5px solid rgba(0,0,0,0.04);
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.12), 0 3px 1px 0 rgba(0,0,0,0.04);
+    border-radius: 20px 7px 7px 20px;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+    will-change: transform;
+    -webkit-transition: transform .2s ease;
+    transition: transform .2s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    padding: 5px;
+    font-weight: 600px;
+
+}
+
+.ios-segmented-control .option:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+    box-shadow: none;
+}
+.ios-segmented-control .option {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    padding: 5px;
+}
+* {
+    box-sizing: border-box;
+}
+.ios-segmented-control .option input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    opacity: 0;
+    text-align: center;
+}
+
+.disclaimer-txt{
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.5)
+}
+
+.url{
+    color: rgb(31, 31, 184);
+    opacity: 1;
+}
 </style>
 
 <body>
@@ -250,7 +341,7 @@
 
         <div class="colcard-wrap">
             <img src="https://cdn.discordapp.com/attachments/689116246041559114/1124804791806214294/id-card.svg" alt="">
-            <p>Collegekaart</p>
+            <p>Kaarten</p>
         </div>
 
     </div>
@@ -258,33 +349,42 @@
     <div class="app-body">
 
         <div class="college-kaart-view">
+
+            <div class="ios-segmented-control">
+                <span class="selection" style="font-weight: 600px;">Kaart</span>
+    
+                <div class="option">
+                    <input type="radio" id="metro" name="sample" value="metro" checked="">
+                    <label for="metro"><span style="z-index: 10;" >Kaart</span></label>
+                </div>
+    
+                <div class="option">
+                    <input type="radio" id="bus" name="sample" value="bus">
+                    <label for="bus"><span>Bibliotheekpas</span></label>
+                </div>
+    
+            </div>
+
+            <!-- 
             <div class="ckv-image">
                 <img src="https://cdn.discordapp.com/attachments/689116246041559114/1125026983114449006/IMG_0301.jpg" alt="">
-                <!--
+          
                 <img  src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
-                -->
             </div>
+            -->
+
             <div class="ckv-content">
-                <p class="ckv-name" >Midas Hofstra</p>
+                <p class="ckv-name" >M.J. Hofstra</p>
                 <p class="ckv-nummer" >1234567</p>
                 <p class="ckv-bd" >8 April 2001</p>
 
-                <img src="https://cdn.discordapp.com/attachments/689116246041559114/1125020372010545204/logo_uu_full-2.svg" alt="">
+                <img src="https://cdn.discordapp.com/attachments/689116246041559114/1125045194526576772/UU_logo_2021_NL_RGB.png" alt="">
 
             </div>
 
         </div>
 
         <div class="ck-details">
-            <div class="ckd-item">
-                <div class="ckd-item-icon">
-                    <img class="custom-image" src="https://cdn.discordapp.com/attachments/689116246041559114/1125029853004038235/hat.svg" alt="">
-                </div>
-                <div class="ckd-item-text">
-                    <p class="ckd-item-text-title" >Opleiding</p>
-                    <p class="ckd-item-text-cont">Commerciele Economie</p>
-                </div>
-            </div>
             <div class="ckd-item">
                 <div class="ckd-item-icon">
                     <img src="https://cdn.discordapp.com/attachments/689116246041559114/1124804729143300267/calendar.svg" alt="">
@@ -300,11 +400,30 @@
                 </div>
                 <div class="ckd-item-text">
                     <p class="ckd-item-text-title" >Geldig</p>
-                    <p class="ckd-item-text-cont" >2 augustus 2022 tot 13 juli 2024</p>
+                    <p class="ckd-item-text-cont" >Van 1 september 2022 tot en met 31 augustus 2023</p>
                 </div>
+            </div>
+            <div class="ckd-item">
+                <div class="ckd-item-icon">
+                    <img class="custom-image" src="https://cdn.discordapp.com/attachments/689116246041559114/1125029853004038235/hat.svg" alt="">
+                </div>
+                <div class="ckd-item-text">
+                    <p class="ckd-item-text-title" >Opleiding</p>
+                    <p class="ckd-item-text-cont">Commerciele Economie</p>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p class="disclaimer-txt" >
+                    Disclaimer
+                    <br>
+                    Je rechten als student zin geregeld in het Studentenstatut en de Onderwijs- en Examenregeling. Zie <span class="url" >www.uu.nl/onderwijsregelingen</span>. Het hoofd van de Centrale Studentenadministratie verklaart namens het College van Bestuur van de Universiteit Utrecht dat bovenstaande informatie just is. Deze collegekaart is alleen geldig i.c.m. een geldig legitimatiebewijs
+                </p>
             </div>
         </div>
     </div>
+
+
 
 
     <div class="footer">
@@ -312,17 +431,18 @@
             <img src="https://cdn.discordapp.com/attachments/689116246041559114/1124804598369112194/compass.svg" alt="">
             <p>Dashboard</p>
         </div>
-        <div class="footer-item">
-            <img src="https://cdn.discordapp.com/attachments/689116246041559114/1124804652542722108/circle-check.svg" alt="">
-            <p>Resultaten</p>
-        </div>
+    
         <div class="footer-item">
             <img src="https://cdn.discordapp.com/attachments/689116246041559114/1124804729143300267/calendar.svg" alt="">
             <p>Rooster</p>
         </div>
+        <div class="footer-item">
+            <img src="https://cdn.discordapp.com/attachments/689116246041559114/1124804652542722108/circle-check.svg" alt="">
+            <p>Resultaten</p>
+        </div>
         <div class="footer-item active">
             <img src="https://cdn.discordapp.com/attachments/689116246041559114/1124804791806214294/id-card.svg" alt="">
-            <p>Collegekaart</p>
+            <p>Kaarten</p>
         </div>
         <div class="footer-item">
             <img src="https://cdn.discordapp.com/attachments/689116246041559114/1124805092734939156/dd45.svg" alt="">
