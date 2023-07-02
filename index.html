@@ -115,7 +115,7 @@
 
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
 
-        padding-bottom: 48px;
+        padding-bottom: 32px;
     }
 
     .footer-item{
@@ -152,9 +152,11 @@
         width: 100%;
     }
 
+
+
     .college-kaart-view{
         margin-top: -48px;
-        border: 1px solid #00000010;
+        /* border: 1px solid #00000010; */
         border-radius: 25px;
         background-color: white;
         padding: 25px;
@@ -163,7 +165,23 @@
         margin-left: 20px;
         margin-right: 20px;
         margin-top: -38px;
+
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.10);
     }
+
+    .ck-details{
+        border-radius: 25px;
+        background-color: white;
+        box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.10);
+        margin: 20px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 36px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+
 
     .ckv-image > img {
         width: 120px;
@@ -192,6 +210,38 @@
         flex-direction: column;
         justify-content: space-evenly;
     }
+
+    .ckd-item{
+        display: flex;
+        column-gap: 20px;
+    }
+
+    .ckd-item-icon > img {
+
+        height: 20px;
+        opacity: 0.8;
+    }   
+
+    .custom-image{
+        height: 18px !important;
+    }
+
+    .ckd-item-text-title{
+        font-weight: 600;
+        opacity: 1;
+    }
+
+    .ckd-item-text-cont{
+        opacity: 0.5;
+    font-size: 14px;
+    font-weight: 400;
+    }
+
+    .ckd-item-text{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3px;
+    }
 </style>
 
 <body>
@@ -209,7 +259,10 @@
 
         <div class="college-kaart-view">
             <div class="ckv-image">
+                <img src="https://cdn.discordapp.com/attachments/689116246041559114/1125026983114449006/IMG_0301.jpg" alt="">
+                <!--
                 <img  src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
+                -->
             </div>
             <div class="ckv-content">
                 <p class="ckv-name" >Midas Hofstra</p>
@@ -219,8 +272,38 @@
                 <img src="https://cdn.discordapp.com/attachments/689116246041559114/1125020372010545204/logo_uu_full-2.svg" alt="">
 
             </div>
+
         </div>
-        <p>appView</p>
+
+        <div class="ck-details">
+            <div class="ckd-item">
+                <div class="ckd-item-icon">
+                    <img class="custom-image" src="https://cdn.discordapp.com/attachments/689116246041559114/1125029853004038235/hat.svg" alt="">
+                </div>
+                <div class="ckd-item-text">
+                    <p class="ckd-item-text-title" >Opleiding</p>
+                    <p class="ckd-item-text-cont">Commerciele Economie</p>
+                </div>
+            </div>
+            <div class="ckd-item">
+                <div class="ckd-item-icon">
+                    <img src="https://cdn.discordapp.com/attachments/689116246041559114/1124804729143300267/calendar.svg" alt="">
+                </div>
+                <div class="ckd-item-text">
+                    <p class="ckd-item-text-title" >Collegejaar</p>
+                    <p class="ckd-item-text-cont" >2023 - 2024</p>
+                </div>
+            </div>
+            <div class="ckd-item">
+                <div class="ckd-item-icon">
+                    <img src="https://cdn.discordapp.com/attachments/689116246041559114/1125028522180747264/clock-five.svg" alt="">
+                </div>
+                <div class="ckd-item-text">
+                    <p class="ckd-item-text-title" >Geldig</p>
+                    <p class="ckd-item-text-cont" >2 augustus 2022 tot 13 juli 2024</p>
+                </div>
+            </div>
+        </div>
     </div>
 
 
